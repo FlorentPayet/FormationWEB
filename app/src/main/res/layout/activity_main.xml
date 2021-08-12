@@ -15,7 +15,7 @@
         android:id="@+id/IV_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/bb_loups" />
 
     <TextView
         android:id="@+id/textView"

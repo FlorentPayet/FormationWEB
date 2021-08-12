@@ -21,6 +21,7 @@ class RegistryActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         auth.signOut()
+
         val btConnecter = findViewById<Button>(R.id.BT_connecter)
         val etUtilisateur = findViewById<EditText>(R.id.ET_utilisateur)
         val etMdp = findViewById<EditText>(R.id.ET_mdp)
@@ -39,16 +40,21 @@ class RegistryActivity : AppCompatActivity() {
                 toast("Remplissez les deux champs")
             } else auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
-                    if (task.isSuccessful)
+                    if (task.isSuccessful){
+                    val user = auth.currentUser
                         toast("Enregistrement OK")
-                    else toast("Erreur")
+                        user?.sendEmailVerification()
+                            ?.addOnCompleteListener { task ->
+                            toast("Un message de vérification vous à été envoyé")
+                            }
+                        }
+                    else
+                        toast("Erreur")
                     val myintent = Intent(this,MainActivity2::class.java)
                     myintent.putExtra("Adresse Mail",email)
                     myintent.putExtra("Mot de passe",password)
                     startActivity(myintent,)
-                    /*val myintent2 = Intent(this,MainActivity2::class.java)
-                    myintent2.putExtra("Mot de passe",password)
-                    startActivity(myintent2)*/
+
                 }
 
             }
@@ -57,12 +63,3 @@ class RegistryActivity : AppCompatActivity() {
 
 }
 
-/*
-//MAINACTIVITY2
-val cpt = intent.getIntExtra("Compteur",0)
-//MAINACTIVITY
-val cpt = 2
-val myintent = Intent(this,MainActivity2::class.java)
-myintent.putExtra("Compteur",cpt)
-startActivity(myintent)
-*/

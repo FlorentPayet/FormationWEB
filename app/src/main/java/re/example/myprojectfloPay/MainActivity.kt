@@ -47,12 +47,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-/*
-//MAINACTIVITY2
-val cpt = intent.getIntExtra("Compteur",0)
-//MAINACTIVITY
-val cpt = 2
-val myintent = Intent(this,MainActivity2::class.java)
-myintent.putExtra("Compteur",cpt)
-startActivity(myintent)
-*/
