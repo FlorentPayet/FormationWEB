@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "909791103792",
+    "project_id": "projet-flo-formation",
+    "storage_bucket": "projet-flo-formation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909791103792:android:2a3700e1388290522056f5",
+        "android_client_info": {
+          "package_name": "re.example.myprojectfloPay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909791103792-s3m1cf1glr4b5s0gubbq0kiplol8rbgq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCreEdAAUJofY-BW5eMzFYLCfxV0WUtqhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909791103792-s3m1cf1glr4b5s0gubbq0kiplol8rbgq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
