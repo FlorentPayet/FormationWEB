@@ -19,6 +19,8 @@ class RegistryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         auth = Firebase.auth
+
+        auth.signOut()
         val btConnecter = findViewById<Button>(R.id.BT_connecter)
         val etUtilisateur = findViewById<EditText>(R.id.ET_utilisateur)
         val etMdp = findViewById<EditText>(R.id.ET_mdp)
@@ -42,6 +44,7 @@ class RegistryActivity : AppCompatActivity() {
                     else toast("Erreur")
                     val myintent = Intent(this,MainActivity2::class.java)
                     myintent.putExtra("Adresse Mail",email)
+                    myintent.putExtra("Mot de passe",password)
                     startActivity(myintent,)
                     /*val myintent2 = Intent(this,MainActivity2::class.java)
                     myintent2.putExtra("Mot de passe",password)

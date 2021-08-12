@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="20dp"
     android:background="#FFEB3B"
     android:gravity="center"
     android:orientation="vertical"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
     <ImageView
@@ -34,6 +36,7 @@
         android:hint="email"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:padding="10dp"
         android:textColor="#3F51B5"
         android:textSize="24sp" />
 
@@ -42,11 +45,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="#F8F4F4"
+        android:background="#FAF5F5"
         android:ems="10"
-        android:hint="password"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#131212"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/BT_connecter"

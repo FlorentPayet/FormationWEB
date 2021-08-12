@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:padding="20dp"
+        android:padding="15dp"
         android:textColor="#CC1010" />
 
     <TextView
@@ -37,7 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:padding="20dp" />
+        android:padding="15dp"
+        android:textColor="#3F51B5" />
 
     <Button
         android:id="@+id/BT_Connecter2"
@@ -55,4 +56,13 @@
         android:backgroundTint="#4CAF50"
         android:minHeight="60dp"
         android:text="Créer un nouveau compte" />
+
+    <Button
+        android:id="@+id/BT_deconnecter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#F44336"
+        android:padding="10dp"
+        android:text="Déconnecter" />
 </LinearLayout>

@@ -19,16 +19,19 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+        auth = Firebase.auth
 
 
         val tvMdpuser = findViewById<TextView>(R.id.TV_mdpuser)
         val btCreer2 = findViewById<Button>(R.id.BT_creer2)
         val btConnecter2 = findViewById<Button>(R.id.BT_Connecter2)
-        val email = intent.getStringExtra("Adresse Mail")
         val tvMailuser = findViewById<TextView>(R.id.TV_mailuser)
+
+        val email = intent.getStringExtra("Adresse Mail")
         tvMailuser.text = email.toString()
         val password = intent.getStringExtra("Mot de passe")
         tvMdpuser.text = password.toString()
+
         btCreer2.setOnClickListener {
             start<RegistryActivity>()
         }
